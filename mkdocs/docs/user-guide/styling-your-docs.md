@@ -1,10 +1,10 @@
-# Styling your docs
+# 配置主题
 
-How to style and theme your documentation.
+如何配置主题.
 
 ---
 
-## Built-in themes
+## 内建主题
 
 #### Bootstrap
 
@@ -40,9 +40,9 @@ How to style and theme your documentation.
 
 ![Yeti](http://bootswatch.com/yeti/thumbnail.png)
 
-## Custom themes
+## 自定义主题
 
-The bare minimum required for a custom theme is a `base.html` template file. This should be placed in a directory at the same level as the `mkdocs.yml` configuration file. Within `mkdocs.yml`, specify the `theme_dir` option and set it to the name of the directory containing `base.html`. For example, given this example project layout:
+自定义主题最少只需要一个 `base.html` 模板文件就可以了. 模板目录应当被放置到与 `mkdocs.yml` 配置文件相同目录下. 在 `mkdocs.yml` 文件中指定 `theme_dir` 选项为包含 `base.html` 文件的目录即可. 例如, 如下目录结构:
 
     mkdocs.yml
     docs/
@@ -52,13 +52,13 @@ The bare minimum required for a custom theme is a `base.html` template file. Thi
         base.html
         ...
 
-You would include the following setting to use the custom theme directory:
+你需要配置自定义主题目录选项:
 
     theme_dir: 'custom_theme'
 
-If used in combination with the `theme` configuration value a custom theme can be used to replace only specific parts of a built-in theme. For example, with the above layout and if you set `theme: mkdocs` then the `base.html` file would replace that in the theme but otherwise it would remain the same. This is useful if you want to make small adjustments to an existing theme.
+如果和 `theme` 选项结合使用, 自定义主题可以用于替换内建主题的特定部分. 例如, 上述目录结构如果你设置了 `theme: mkdocs` , 那么 `base.html` 将替换主题中的相应文件, 而其他的则保持不变. 这在你希望对主题进行小调整时是十分有用的.
 
-The simplest `base.html` file is the following:
+最简单的 `base.html` 结构如下:
 
     <!DOCTYPE html>
     <html>
@@ -69,4 +69,4 @@ The simplest `base.html` file is the following:
       </body>
     </html>
 
-Article content from each page specified in `mkdocs.yml` is inserted using the `{{ content }}` tag. Stylesheets and scripts can be brought into this theme as with a normal HTML file. Navbars and tables of contents can also be generated and included automatically, through the `nav` and `toc` objects, respectively. If you wish to write your own theme, it is recommended to start with one of the [built-in themes](https://github.com/tomchristie/mkdocs/tree/master/mkdocs/themes) and modify it accordingly.
+`mkdocs.yml` 中指定的每一页的文档内容使用 `{{ content }}` 标签来插入. 可以像处理普通 HTML 文档一样导入样式表和脚本. 相应的, 导航栏和内容列表可以通过  `nav` 和 `toc` 对象自动生成和包含. 如果你想设计自定义的主题, 最好从修改 [内建主题](https://github.com/tomchristie/mkdocs/tree/master/mkdocs/themes) 开始.

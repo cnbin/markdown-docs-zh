@@ -1,10 +1,10 @@
-# Configuration
+# 配置
 
-Guide to all available configuration settings.
+所有配置参数.
 
 ---
 
-## Introduction
+## 简介
 
 Project settings are always configured by using a YAML configuration file in the project directory named `mkdocs.yml`.
 

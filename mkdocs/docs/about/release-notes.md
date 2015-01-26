@@ -4,7 +4,7 @@
 
 ## 升级
 
-升级 MkDocs 到最新版, 使用 pip:
+使用 pip 升级 MkDocs 到最新版:
 
     pip install -U mkdocs
 

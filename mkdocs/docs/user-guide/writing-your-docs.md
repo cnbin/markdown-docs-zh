@@ -1,22 +1,22 @@
-# Writing your docs
+# 撰写文档
 
-How to write and layout your markdown source files.
+如何撰写 markdown 源码并安排目录结构.
 
 ---
 
-## File layout
+## 目录结构
 
-Your documentation source should be written as regular Markdown files, and placed in a directory somewhere in your project.  Normally this directory will be named `docs` and will exist at the top level of your project, alongside the `mkdocs.yml` configuration file.
+文档是普通的 Markdown 文件, 放到项目目录里.  通常目录以 `docs` 命名, 和 `mkdocs.yml` 配置文件一起放置于项目的顶级目录中.
 
-The simplest project you can create will look something like this:
+最简单的项目目录结构可能是这样的:
 
     mkdocs.yml
     docs/
         index.md
 
-By convention your project homepage should always be named `index`.  Any of the following extensions may be used for your Markdown source files: `markdown`, `mdown`, `mkdn`, `mkd`, `md`.
+默认项目主页是 `index`.  Markdown 源码文件的后缀可以是以下任意一种: `markdown`, `mdown`, `mkdn`, `mkd`, `md`.
 
-You can also create multi-page documentation, by creating several markdown files:
+你可以创建多个 markdown 文件以创建多页文档:
 
     mkdocs.yml
     docs/
@@ -47,25 +47,25 @@ Source files inside nested directories will cause pages to be generated with nes
     /license/
 
 
-## Linking documents
+## 链接
 
-MkDocs allows you to interlink your documentation by using regular Markdown hyperlinks.
+MkDocs 可以使用 Markdown 超链接语法来创建链接.
 
-#### Internal hyperlinks
+#### 内部超链接
 
-When linking between pages in the documentation you can simply use the regular Markdown hyperlinking syntax, including the relative path to the Markdown document you wish to link to.
+创建内部超链接只需使用 Markdown 超链接语法, 包含目标 Markdown 文档的相对路径即可.
 
     Please see the [project license](license.md) for further details.
 
-When the MkDocs build runs, these hyperlinks will automatically be transformed into a hyperlink to the appropriate HTML page.
+当运行 MkDocs 构建工具时, 超链接将指向相应的 HTML 页面.
 
-When working on your documentation you should be able to open the linked Markdown document in a new editor window simply by clicking on the link.
+你可以通过点击链接以在新编辑器窗口中打开目标 Markdown 文档.
 
-If the target documentation file is in another directory you'll need to make sure to include any relative directory path in the hyperlink.
+如果目标文档在另一个目录中, 确保超链接中正确包含了相对路径.
 
     Please see the [project license](../about/license.md) for further details.
 
-You can also link to a section within a target documentation page by using an anchor link.  The generated HTML will correctly transform the path portion of the hyperlink, and leave the anchor portion intact.
+你可用通过锚链接以定位到目标文档的特定部分.  生成的 HTML 将正确转换路径部分, 而不会去改变锚链接部分.
 
     Please see the [project license](about.md#license) for further details.
 
@@ -81,11 +81,11 @@ Eam ad euismod accusata vituperata. Oratio vocent nominavi ei eum.
     Ne his mucius oporteat, [mea ut eros delicatissimi](ref:delicatissimi), iudico nonumes moderatius an mel.
 -->
 
-## Images and media
+## 图片和多媒体
 
-As well as the Markdown source files, you can also include other file types in your documentation, which will be copied across when generating your documentation site.  These might include images and other media.
+除了 Markdown 文件, 你可以在文档中包含其他文件, 这些文件将在你构建文档时被复制到指定位置.  可以包含图片和其他多媒体.
 
-For example, if your project documentation needed to include a [GitHub pages CNAME file](https://help.github.com/articles/setting-up-a-custom-domain-with-pages#setting-the-domain-in-your-repo) and a PNG formatted screenshot image then your file layout might look as follows:
+例如, 如果你的文档需要包含一个 [GitHub pages CNAME file](https://help.github.com/articles/setting-up-a-custom-domain-with-pages#setting-the-domain-in-your-repo) 和 一张 PNG 图片, 你可以安排目录结构如下:
 
     mkdocs.yml
     docs/
@@ -96,7 +96,7 @@ For example, if your project documentation needed to include a [GitHub pages CNA
         img/
             screenshot.png
 
-To include images in your documentation source files, simply use any of the regular Markdown image syntaxes:
+要包含图片到你的源码文档, 只需使用 Markdown 语法:
 
     Cupcake indexer is a snazzy new project for indexing small cakes.
 
@@ -104,11 +104,11 @@ To include images in your documentation source files, simply use any of the regu
 
     *Above: Cupcake indexer in progress*
 
-You image will now be embedded when you build the documentation, and should also be previewed if you're working on the documentation with a Markdown editor.
+图片链接将在构建时被嵌入, 如果使用了 Markdown 编辑器, 你还可以实时预览.
 
-## Markdown extensions
+## Markdown 扩展
 
-MkDocs supports the following Markdown extensions.
+MkDocs 支持以下 Markdown 扩展.
 
 <!--
 #### Page metadata
@@ -126,37 +126,37 @@ At mel verear persius torquatos, his dolores sensibus id, alia urbanitas in usu.
 	Unum errem propriae vis cu, et deseruisse interpretaris eam. Illum graecis per an, ludus laoreet repudiare nec an, molestie recteque et eam.
 -->
 
-#### Tables
+#### 表格
 
-A simple table looks like this:
+以下是一个简单的表格:
 
     First Header | Second Header | Third Header
     ------------ | ------------- | ------------
     Content Cell | Content Cell  | Content Cell
     Content Cell | Content Cell  | Content Cell
 
-If you wish, you can add a leading and tailing pipe to each line of the table:
+可以在起始和结束位置添加管道到表格:
 
     | First Header | Second Header | Third Header |
     | ------------ | ------------- | ------------ |
     | Content Cell | Content Cell  | Content Cell |
     | Content Cell | Content Cell  | Content Cell |
 
-Specify alignment for each column by adding colons to separator lines:
+可以在分隔符行添加冒号已指定每一列的对其方式:
 
     First Header | Second Header | Third Header
     :----------- | :-----------: | -----------:
     Left         | Center        | Right
     Left         | Center        | Right
 
-#### Fenced code blocks
+#### 代码块
 
-Start with a line containing 3 or more backtick \` characters, and ends with the first line with the same number of backticks \`:
+以三个以上 \` （反引号）开始一行, 并在结束位置以相同数目的反引号 \` （反引号）开始一行即可包含一个代码块:
 
     ```
     Fenced code blocks are like Stardard
-    Markdown’s regular code blocks, except that
-    they’re not indented and instead rely on a
+    Markdown regular code blocks, except that
+    theye not indented and instead rely on a
     start and end fence lines to delimit the code
     block.
     ```

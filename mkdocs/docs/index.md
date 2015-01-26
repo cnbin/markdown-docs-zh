@@ -1,119 +1,119 @@
 # MkDocs
 
-Project documentation with&nbsp;Markdown.
+Markdown 项目文档工具.
 
 ---
 
-## Overview
+## 概述
 
-MkDocs is a **fast**, **simple** and **downright gorgeous** static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
-
----
-
-**MkDocs is currently still in development.**
-
-We're progressing quickly, but the documentation still needs filling in, and theres a few rough edges.  The 1.0 release is planned to arrive in the next few weeks.
+MkDocs 是一个用于创建项目文档的 **快速**, **简单** , **完美华丽** 的静态站点生成器. 文档源码使用 Markdown 来撰写, 用一个 YAML 文件作为配置文档.
 
 ---
 
-#### Host anywhere.
+**MkDocs 仍处于开发阶段.**
 
-Builds completely static HTML sites that you can host on GitHub pages, Amazon S3, or anywhere else you choose.
-
-#### Great themes available.
-
-There's a stack of good looking themes included by default. Choose from bootstrap, readthedocs, or any of the 12 bootswatch themes.
-
-#### Preview your site as you work.
-
-The built-in devserver allows you to preview your documentation as you're writing it. It will even auto-reload whenever you save any changes, so all you need to do to see your latest edits is refresh your browser.
-
-#### Easy to customize.
-
-Get your project documentation looking just the way you want it by customizing the theme.
-
-#### Cross-reference your documentation.
-
-Create richly cross-referenced documents, using the MkDocs interlinking syntax.
+我们正在快速成长, 但是文档仍然需要完善, 软件本身也有一些不完善的地方. 1.0 版本计划在未来几周内发布.
 
 ---
 
-## Installation
+#### 任意托管.
 
-In order to install MkDocs you'll need [Python][python] installed on your system, as well as the Python package manager, [pip][pip].  You can check if you have these already installed like so:
+构建完全的静态 HTML 站点 , 可以将它托管到 GitHub pages, Amazon S3 等任意地方.
+
+#### 大量主题.
+
+默认包含大量美观的主题. 可以从包括 bootstrap, readthedocs 在内的 12 款主题中选择.
+
+#### 即时预览.
+
+内建的开发服务器使你在撰写文档的时候就即时预览. 它甚至能在保存更改时自动载入, 只需刷新浏览器就可以查看更改.
+
+#### 易于配置.
+
+可以配置文档主题.
+
+#### 交叉索引.
+
+使用 MkDocs 链接语法创建交叉索引.
+
+---
+
+## 安装
+
+需要 [Python][python] 和 Python package manager [pip][pip] 来安装 MkDocs . 可以通过以下命令查看是否安装了上述依赖:
 
     $ python --version
     Python 2.7.2
     $ pip --version
     pip 1.5.2
 
-MkDocs supports Python 2.6, 2.7, 3.3 and 3.4.
+MkDocs 支持 Python 2.6, 2.7, 3.3 和 3.4.
 
-Install the `mkdocs` package using pip:
+使用 pip 安装 `mkdocs` :
 
     $ pip install mkdocs
 
-You should now have the `mkdocs` command installed on your system.  Run `mkdocs help` to check that everything worked okay.
+`mkdocs`已经安装到你的系统. 运行 `mkdocs help` 以检查是否正确安装.
 
     $ mkdocs help
     mkdocs [help|new|build|serve|gh-deploy] {options}
 
 ---
 
-## Getting started
+## 开始
 
-Getting started is super easy.
+输入以下命令以开始一个新项目.
 
     $ mkdocs new my-project
     $ cd my-project
 
-Let's take a moment to review the initial project that's been created for us.
+我们看一下已经创建的初始化项目.
 
 ![The initial MkDocs layout](img/initial-layout.png)
 
-There's a single configuration file named `mkdocs.yml`, and a folder named `docs` that will contain our documentation source files.  Right now the `docs` folder just contains a single documentation page, named `index.md`.
+有一个配置文件 `mkdocs.yml`, 和一个包含文档源码的 `docs` 文件夹. 在 `docs` 文件夹里包含了一个名为 `index.md` 的文档.
 
-MkDocs comes with a built-in webserver that lets you preview your documentation as you work on it. We start the webserver by making sure we're in the same directory as the `mkdocs.yml` config file, and then running the `mkdocs serve` command:
+MkDocs 包含了一个内建的服务器以预览当前文档. 控制台切换当前目录到 `mkdocs.yml` 配置文件相同文件夹, 输入 `mkdocs serve` 命令以启动内建服务器:
 
     $ mkdocs serve
 	Running at: http://127.0.0.1:8000/
 
-Open up [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser, and you'll see the index page being displayed:
+在浏览器中打开 [http://127.0.0.1:8000/](http://127.0.0.1:8000/) , 你将看到以下页面:
 
 ![The MkDocs live server](img/screenshot.png)
 
-The webserver also supports auto-reloading, and will rebuild your documentation whenever anything in the configuration file, documentation directory or theme directory changes.
+内建服务器支持在配置文件,文档目录或主题发生改变时自动载入并重新生成文档.
 
-Go ahead and edit the `docs/index.md` file now and save the file. Then simply hit reload in the browser and you'll see your updated documentation.
+编辑 `docs/index.md` 文件并保存. 刷新浏览器你将看到文档被同步更新.
 
-Now's also a good time to edit the configuration file, `mkdocs.yml`.  Change the `site_name` setting to something else and save the file.
+现在可以开始编辑配置文件 `mkdocs.yml` 了.  把 `site_name` 改成其他内容并保存文档.
 
 ![Editing the config file](img/initial-config.png)
 
-Once you hit reload in the browser you'll see your new site name take effect.
+刷新浏览器你将看到网页标题已发生改变.
 
 ![The site_name setting](img/site-name.png)
 
-## Adding pages
+## 添加页面
 
-Go ahead and edit the `doc/index.md` document, and change the initial heading to `MkLorum`, then reload the site in your browser, and you should see the change take effect immediately.
+编辑 `doc/index.md` 文档, 将默认标题改为 `MkLorum`, 刷新浏览器即可看到标题变化.
 
-Let's also add a second page to our documentation:
+现在为文档添加第二个页面:
 
     $ curl 'jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md
 
-We'd like our documentation site to include some navigation headers, so we'll edit the configuration file and add some information about the order and title to use for out headers:
+要为文档添加导航条, 只需在配置文件中添加导航条需要的标题和排序即可:
 
     site_name: MkLorum
     pages:
     - [index.md, Home]
     - [about.md, About]
 
-Refresh the browser and you'll now see a navigation bar with `Home` and `About` headers.
+刷新浏览器即可看到 `Home` 和 `About` 导航栏目.
 
-## Theming our documentation
+## 配置主题
 
-While we're here can also change the configuration file to alter how the documentation is displayed.  Let's go ahead and change the theme.  Edit the `mkdocs.yml` file to the following:
+可以在配置文件中修改文档主题. 在 `mkdocs.yml` 中添加如下内容:
 
     site_name: MkLorum
     pages:
@@ -121,36 +121,36 @@ While we're here can also change the configuration file to alter how the documen
     - [about.md, About]
     theme: readthedocs
 
-Refresh the browser again, and you'll now see the ReadTheDocs theme being used.
+刷新浏览器即可看到 ReadTheDocs 主题已被应用.
 
 ![Screenshot](img/readthedocs.png)
 
-## Building the site
+## 站点生成
 
-That's looking good.  We're ready to deploy the first pass of our `MkLorum` documentation now.  Let's build the documentation.
+我们现在已经可以发布 `MkLorum` 文档了. 通过以下命令生成文档.
 
     $ mkdocs build
 
-This will create a new directory, named `site`.  Let's take a look inside the directory:
+该命令创建了一个 `site` 新目录. 可以通过以下命令浏览该目录内容:
 
     $ ls site
     about css fonts img index.html js
 
-Notice that our source documentation has been output as two HTML files named `index.html` and `about/index.html`.  We also have various other media that's been copied into the `site` directory as part of the documentation theme.
+注意源码被分别输出为 `index.html` 和 `about/index.html`.  主题中的其他文件也被复制到了 `site` 目录中.
 
-If you're using source code control such as `git` you probably don't want to check your documentation builds into the repository.  Add a line containing `site/` to your `.gitignore` file.
+如果你使用 `git` 等版本控制系统, 你可能不希望提交构建之后的文档到版本库.  在 `.gitignore` 中添加 `site/` 即可忽略该目录.
 
     $ echo "site/" >> .gitignore
 
-If you're using another source code control you'll want to check it's documentation on how to ignore specific directories.
+如果你使用其他版本控制系统则需要查阅相关文档以确定如何忽略指定目录.
 
-After some time, files may be removed from the documentation but they will still reside in the `site` directory. To remove those stale files, just run mkdocs with the `--clean` switch.
+一段时间后, 可能有文件被从源码中移除了, 但是相关的文档仍残留在 `site` 目录中. 在构建命令中添加 `--clean` 参数即可移除这些文档.
 
     $ mkdocs build --clean
 
-## Deploying
+## 发布
 
-The documentation site that we've just built only uses static files so you'll be able to host it from pretty much anywhere. [GitHub project pages](https://help.github.com/articles/creating-project-pages-manually) and [Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) are good hosting options. Upload the contents of the entire `site` directory to wherever you're hosting your website from and you're done.
+MkDocs 生成的文档只包含静态文件, 因此你可以将文档部署到任意地方. [GitHub project pages](https://help.github.com/articles/creating-project-pages-manually) 和 [Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) 是不错的选择. 只需上传 `site` 目录到你需要发布的位置即可.
 
 [python]: https://www.python.org/
 [pip]: http://pip.readthedocs.org/en/latest/installing.html
