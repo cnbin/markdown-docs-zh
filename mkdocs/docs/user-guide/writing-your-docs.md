@@ -24,14 +24,14 @@
         about.md
         license.md
 
-The file layout you use determines the URLs that are used for the generated pages.
-Given the above layout, pages would be generated for the following URLs:
+文档目录结构决定着生成的文档的 URLs .
+如果采用如上目录结构, 生成的 URLs 将会如下所示:
 
     /
     /about/
     /license/
 
-You can also include your Markdown files in nested directories if that better suits your documentation layout.
+你也可以根据需要将 Markdown 文件放到多级目录.
 
     docs/
         index.md
@@ -39,7 +39,7 @@ You can also include your Markdown files in nested directories if that better su
         user-guide/configuration-options.md
         license.md
 
-Source files inside nested directories will cause pages to be generated with nested URLs, like so:
+多级目录将生成多级 URLs, 如下所示:
 
     /
     /user-guide/getting-started/
@@ -69,18 +69,6 @@ MkDocs 可以使用 Markdown 超链接语法来创建链接.
 
     Please see the [project license](about.md#license) for further details.
 
-<!--
-#### Cross-referencing your documentation
-
-Ex eam quem facilisi deserunt. Veri audiam audire id his, quo at aperiri moderatius. In admodum partiendo est, ei rebum minimum eam, singulis accusata delicatissimi eos ut. Imperdiet vulputate assueverit eos an, elit recusabo et usu. Eam ad euismod accusata vituperata. Oratio vocent nominavi ei eum.
-
-    At mel verear persius torquatos, his dolores [Sensibus](ref:) id, alia urbanitas in usu.
-
-Eam ad euismod accusata vituperata. Oratio vocent nominavi ei eum.
-
-    Ne his mucius oporteat, [mea ut eros delicatissimi](ref:delicatissimi), iudico nonumes moderatius an mel.
--->
-
 ## 图片和多媒体
 
 除了 Markdown 文件, 你可以在文档中包含其他文件, 这些文件将在你构建文档时被复制到指定位置.  可以包含图片和其他多媒体.
@@ -109,22 +97,6 @@ Eam ad euismod accusata vituperata. Oratio vocent nominavi ei eum.
 ## Markdown 扩展
 
 MkDocs 支持以下 Markdown 扩展.
-
-<!--
-#### Page metadata
-
-Unum errem propriae vis cu, et deseruisse interpretaris eam. Illum graecis per an, ludus laoreet repudiare nec an, molestie recteque et eam. Purto duis rationibus id eum, pro et amet appetere referrentur, minim impedit ad ius. Et nostrud perfecto sapientem vix, et dicit impedit consequat vim. Vis liber blandit no.
-
-At mel verear persius torquatos, his dolores sensibus id, alia urbanitas in usu. Te pri cibo blandit. Debet dolore periculis ei pro, eu vis vidit ignota, vim natum dicta cu. Et appareat delicata vix, mei at solum lorem quodsi, verterem electram sit eu. Eius malis cum an, pro malorum euripidis ad, oblique appetere est cu. Eos ei fugit deterruisset. Vix ei aliquip dolorem, usu te euripidis reformidans, volumus pertinacia ea eam.
-
-    page_title: Lorum
-	page_description: "lorum ipsum dolor"
-	source_files: example.js, lorum.js
-
-	# Lorum Ipsum
-
-	Unum errem propriae vis cu, et deseruisse interpretaris eam. Illum graecis per an, ludus laoreet repudiare nec an, molestie recteque et eam.
--->
 
 #### 表格
 
@@ -160,12 +132,3 @@ At mel verear persius torquatos, his dolores sensibus id, alia urbanitas in usu.
     start and end fence lines to delimit the code
     block.
     ```
-
-<!--
-#### Admonitions
-
-Ad est nibh suscipiantur. Quaeque deleniti delectus an has, tempor accusamus eu vix. Et democritum expetendis nam, putent fuisset duo ea, elaboraret efficiendi no vis.
-
-    !!! danger "Don't try this at home"
-        May cause grevious bodily harm
--->

@@ -22,7 +22,7 @@ MkDocs 是一个用于创建项目文档的 **快速**, **简单** , **完美华
 
 #### 大量主题.
 
-默认包含大量美观的主题. 可以从包括 bootstrap, readthedocs 在内的 12 款主题中选择.
+默认包含大量美观的主题. 可以从 bootstrap, readthedocs 和 12 款 bootswatch 主题中选择.
 
 #### 即时预览.
 

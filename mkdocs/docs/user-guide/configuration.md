@@ -6,98 +6,97 @@
 
 ## 简介
 
-Project settings are always configured by using a YAML configuration file in the project directory named `mkdocs.yml`.
+项目配置在 `mkdocs.yml` 文件中设置.
 
-As a miniumum this configuration file must contain the `site_name` setting.  All other settings are optional.
+配置文件中至少应包含 `site_name` 选项.  其余选项都是可选的.
 
-## Project information
+## 项目信息
 
 ### site_name
 
-This is a **required setting**, and should be a string that is used as the main title for the project documentation.  For example:
+这个是 **必须的**, 代表用于项目文档的主标题.  例如:
 
     site_name: Mashmallow Generator
 
-When rendering the theme this setting will be passed as the `site_name` context variable.
+渲染主题时该选项将作为 `site_name` 环境变量传递.
 
 ### site_url
 
-Set the canonical URL of the site. This will add a link tag with the canonical URL to the generated HTML header.
+设置站点的 URL. 这将添加带有规范的 URL 的 link 标签到 HTML 头部.
 
-**default**: `null`
+**默认值**: `null`
 
 ### repo_url
 
-When set, provides a link to your GitHub or Bitbucket repository on each page.
+如果设置了该项, 每个页面将会添加一个链接到你的  GitHub 或 Bitbucket 版本库.
 
     repo_url: https://github.com/example/repository/
 
-**default**: `null`
+**默认值**: `null`
 
 ### repo_name
 
-When set, provides a link to your GitHub or Bitbucket repository on each page.
+如果设置了该项, 每个页面将会添加一个链接到你的  GitHub 或 Bitbucket 版本库.
 
-**default**: `'GitHub'` or `'Bitbucket'` if the `repo_url` matches those domains, otherwise `null`
+**默认值**: `'GitHub'` 或 `'Bitbucket'` 如果 `repo_url` 匹配相应域名, 否则为 `null`
 
 ### site_description
 
-Set the site description. This will add a meta tag to the generated HTML header.
-**default**: `null`
+设置站点描述. 这将这 HTML 头部添加一个 meta 标签.
+
+**默认值**: `null`
 
 ### site_author
 
-Set the name of the author. This will add a meta tag to the generated HTML header.
+设置站点作者. 这将这 HTML 头部添加一个 meta 标签.
 
-**default**: `null`
+**默认值**: `null`
 
 ### site_favicon
 
-Set the favicon to use. Putting a `favicon.ico` into the `docs/` directory, the config would look as follows:
+设置 favicon . 需要将 `favicon.ico` 放到 `docs/` 目录, 配置文件将如下所示:
 
 ```yaml
 site_favicon: favicon.ico
 ```
 
-**default**: `null`
-
+**默认值**: `null`
 
 ### copyright
 
-Set the copyright information to be included in the documentation by the theme.
+设置站点版权信息.
 
-**default**: `null`
-
+**默认值**: `null`
 
 ### google_analytics
 
-Set the Google analytics tracking configuration.
+设置 Google 站点分析工具.
 
 ```yaml
 google_analytics: ['UA-36723568-3', 'mkdocs.org']
 ```
 
-**default**: `null`
+**默认值**: `null`
 
 
-## Documentation layout
+## 目录结构
 
 ### pages
 
-This is setting is used to determine the set of pages that should be built for the documentation.
+该选项设置需要生成的页面范围.
 
-The setting should be a list.  Each row in the list represents information about a single page as a list of strings.  The first string represents the path of the documentation source file, and should be relative to the `docs_dir` setting.  Remaining strings represent the title of the page in the site navigation.
+该选项为一个列表.  列表中的每一行用一个字符串列表表示一个页面.  第一个字符串代表源文件的路径, 应为相对于 `docs_dir` 的路径.  其余字符串代表导航条中的页面标题.
 
-Here's a simple example that would cause the build stage to create three pages:
+下面的例子将在构建阶段生成三个页面:
 
     pages:
     - ['index.md', 'Introduction']
     - ['user-guide.md', 'User Guide']
     - ['about.md', 'About']
 
-Assuming the `docs_dir` setting was left with the default value of `docs`, the source files for this site's build process would be `docs/index.md`, `docs/user-guide.md` and `docs/about.md`.
+假定 `docs_dir` 采用默认值 `docs`, 则构建阶段源文件的路径分别为 `docs/index.md`, `docs/user-guide.md` 和 `docs/about.md`.
 
-If you have a lot of project documentation you might choose to use headings to break up your site navigation by category.  You can do so by including an extra string in the page configuration for any pages that require a navigation heading, like so:
+如果你有大量项目文档, 你需要用导航头部来按目录来组织你的导航.  你可以在 page 选项中包含一个额外的字符串来表示导航头部, 如下所示:
 
     pages:
     - ['index.md', 'Introduction']
@@ -106,60 +105,60 @@ If you have a lot of project documentation you might choose to use headings to b
     - ['user-guide/configuration.md', 'User Guide', 'Configuring Mashmallow']
     - ['about/license.md', 'About', 'License']
 
-## Build directories
+## 构建目录
 
 
 ### theme
 
-Sets the theme of your documentation site, for a list of available themes visit
-[styling your docs](styling-your-docs.md).
+设置站点主题, 查看可用的主题
+[文档样式](styling-your-docs.md).
 
-**default**: `'mkdocs'`
+**默认值**: `'mkdocs'`
 
 
 ### theme_dir
 
-Lets you set a directory to a custom theme.  This can either be a relative directory, in which case it is resolved relative to the directory containing you configuration file, or it can be an absolute directory path.
+设置自定义主题.  这可以是相对目录, 相对于你的配置文件位置来解析该路径, 也可以是绝对路径.
 
-See [styling your docs](styling-your-docs.md#custom-themes) for an explanation of custom themes.
+查看 [文档样式](styling-your-docs.md#custom-themes) 了解自定义主题.
 
-**default**: `null`
+**默认值**: `null`
 
 
 ### docs_dir
 
-Lets you set the directory containing the documentation source markdown files.  This can either be a relative directory, in which case it is resolved relative to the directory containing you configuration file, or it can be an absolute directory path.
+设置包含 markdown 源码的目录.  这可以是相对目录, 相对于你的配置文件位置来解析该路径, 也可以是绝对路径.
 
-**default**: `'docs'`
+**默认值**: `'docs'`
 
 
 ### site_dir
 
-Lets you set the directory where the output HTML and other files are created.  This can either be a relative directory, in which case it is resolved relative to the directory containing you configuration file, or it can be an absolute directory path.
+设置生成的 HTML 和其他文件所在目录.  这可以是相对目录, 相对于你的配置文件位置来解析该路径, 也可以是绝对路径.
 
-**default**: `'site'`
+**默认值**: `'site'`
 
-**Note**: If you are using source code control you will normally want to ensure that your *build output* files are not commited into the repository, and only keep the *source* files under version control.  For example, if using `git` you might add the following line to your `.gitignore` file:
+**Note**: 如果你使用了版本控制系统, 通常不希望 *构建输出* 文件被提交到版本库, 而只需要对 *源码* 进行版本控制.  例如, 如果使用 `git` , 你可以添加以下代码到 `.gitignore` 文件:
 
     site/
 
-If you're using another source code control you'll want to check its documentation on how to ignore specific directories.
+如果使用其他版本控制系统请参阅相应的文档以排除特定目录.
 
 
 ### extra_css
 
-Set a list of css files to be included by the theme.
+设定主题所需的额外的样式文件.
 
-**default**: By default `extra_css` will contain a list of all the CSS files found within the `docs_dir`, if none are found it will be `[]` (an empty list).
+**默认值**: 默认情况下 `extra_css` 将包含 `docs_dir` 目录下的样式文件, 如果没有找到则为 `[]` (空表).
 
 
 ### extra_javascript
 
-Set a list of JavaScript files to be included by the theme.
+设定主题所需的额外的脚本文件.
 
-**default**: By default `extra_javascript` will contain a list of all the JavaScript files found within the `docs_dir`, if none are found it will be `[]` (an empty list).
+**默认值**: 默认情况下 `extra_javascript` 将包含 `docs_dir` 目录下的脚本文件, 如果没有找到则为 `[]` (空表).
 
-## Preview controls
+## 预览控制
 
 ### use_directory_urls
 
@@ -177,7 +176,7 @@ The default style of `use_directory_urls=true` creates more user friendly URLs, 
 
 The alternate style can occasionally be useful if you want your documentation to remain properly linked when opening pages directly from the file system, because it create links that point directly to the target *file* rather than the target *directory*.
 
-**default**: `true`
+**默认值**: `true`
 
 ### dev_addr
 
@@ -187,7 +186,7 @@ As with all settings, you can set this from the command line, which can be usful
 
     mkdocs serve --dev-addr=0.0.0.0:80  # Run on port 80, accessible over the local network.
 
-**default**: `'127.0.0.1:8000'`
+**默认值**: `'127.0.0.1:8000'`
 
 ## Formatting options
 
@@ -199,7 +198,7 @@ For example, to enable the [SmartyPants typography extension][smarty], use:
 
     markdown_extensions: [smartypants]
 
-**default**: `[]`
+**默认值**: `[]`
 
 [pymdk-extensions]: http://pythonhosted.org/Markdown/extensions/index.html
 [pymkd]: http://pythonhosted.org/Markdown/
