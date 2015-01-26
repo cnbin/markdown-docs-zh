@@ -1,6 +1,6 @@
 # MkDocs
 
-Markdown 项目文档工具.
+Markdown 项目文档工具. 本文档翻译自官网[mkdocs][mkdocs].
 
 ---
 
@@ -154,3 +154,4 @@ MkDocs 生成的文档只包含静态文件, 因此你可以将文档部署到�
 
 [python]: https://www.python.org/
 [pip]: http://pip.readthedocs.org/en/latest/installing.html
+[mkdocs]: http://www.mkdocs.org/
