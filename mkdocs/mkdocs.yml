@@ -1,0 +1,18 @@
+site_name: MkDocs 中文文档
+# site_url: http://www.mkdocs.org/
+site_description: Markdown 项目文档工具.
+
+# repo_url: https://github.com/tomchristie/mkdocs/
+
+pages:
+- ['index.md', '主页']
+- ['user-guide/writing-your-docs.md', '用户指南', '撰写文档']
+- ['user-guide/styling-your-docs.md', '用户指南', '文档样式']
+- ['user-guide/configuration.md', '用户指南', '配置']
+- ['about/license.md', '关于', '授权许可']
+- ['about/release-notes.md', '关于', '更新日志']
+
+# copyright: Copyright &copy; 2014, <a href="https://twitter.com/_tomchristie">Tom Christie</a>.
+# google_analytics: ['UA-27795084-5', 'mkdocs.org']
+
+# theme: readthedocs

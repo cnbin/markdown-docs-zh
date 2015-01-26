@@ -1,5 +1,0 @@
-site_name: Markdown Docs zh
-pages:
-- [index.md,Home]
-- [about.md,About]
-theme: readthedocs
