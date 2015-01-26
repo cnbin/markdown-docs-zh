@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>更新日志 - MkDocs 中文文档</title>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css\extra.css" rel="stylesheet">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script>
+
+  <style>
+    body {font-size: 90%;}
+    pre, code {font-size: 100%;}
+    h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
+  </style> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> MkDocs 中文文档</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      <ul class="current">
+    
+        
+        <span>用户指南</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../user-guide/writing-your-docs">撰写文档</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../user-guide/styling-your-docs">文档样式</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../user-guide/configuration">配置</a>
+                    
+                </li>
+            
+        
+
+    
+        
+        <span>关于</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../license">授权许可</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">更新日志</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#_1">更新说明</a></li>
+                            
+                                <li><a class="toctree-l3" href="#_2">升级</a></li>
+                            
+                                <li><a class="toctree-l3" href="#0111-2014-11-20">0.11.1 (2014-11-20)</a></li>
+                            
+                                <li><a class="toctree-l3" href="#0110-2014-11-18">0.11.0 (2014-11-18)</a></li>
+                            
+                                <li><a class="toctree-l3" href="#0100-2014-10-29">0.10.0 (2014-10-29)</a></li>
+                            
+                        
+                        </ul>
+                    
+                </li>
+            
+        
+
+    
+</ul>
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="../.."></a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    <li>更新日志</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              <h1 id="_1">更新说明</h1>
+<hr />
+<h2 id="_2">升级</h2>
+<p>使用 pip 升级 MkDocs 到最新版:</p>
+<pre><code>pip install -U mkdocs
+</code></pre>
+<p>查看当前安装的版本使用 <code>pip freeze</code>:</p>
+<pre><code>pip freeze | grep mkdocs
+</code></pre>
+<h2 id="0111-2014-11-20">0.11.1 (2014-11-20)</h2>
+<ul>
+<li>修复: Fix a CSS wrapping issue with code highlighting in the ReadTheDocs
+  theme. (#233)</li>
+</ul>
+<h2 id="0110-2014-11-18">0.11.0 (2014-11-18)</h2>
+<ul>
+<li>如果当前主题存在 404.html 则生成 404 页面 (#194)</li>
+<li>修复: Fix long nav bars, table rendering and code highlighting in MkDocs
+  and ReadTheDocs themes (#225)</li>
+<li>修复: Fix an issue with the google_analytics code. (#219)</li>
+<li>修复: Remove <code>__pycache__</code> from the package tar. (#196)</li>
+<li>修复: Fix markdown links that go to an anchor on the current page (#197)</li>
+<li>修复: Don't add <code>prettyprint well</code> CSS classes to all HTML, only add it in
+  the MkDocs theme (#183)</li>
+<li>修复: Display section titles in the ReadTheDocs theme (#175)</li>
+<li>修复: Use the polling observer in watchdog so rebuilding works on
+  filesystems without inotify. (#184)</li>
+<li>修复: Improve error output for common configuration related errors. (#176)</li>
+</ul>
+<h2 id="0100-2014-10-29">0.10.0 (2014-10-29)</h2>
+<ul>
+<li>添加 Python 3.3 和 3.4 支持. (#103)</li>
+<li>Configurable Python-Markdown extensions with the config setting
+  <code>markdown_extensions</code>. (#74)</li>
+<li>Added <code>mkdocs json</code> command to output your rendered
+  documentation as json files. (#128)</li>
+<li>Added <code>--clean</code> switch to <code>build</code>, <code>json</code> and <code>gh-deploy</code> commands to
+  remove stale files from the output directory (#157)</li>
+<li>Support multiple theme directories to allow replacement of
+  individual templates rather than copying the full theme. (#129)</li>
+<li>修复: Fix <code>&lt;ul&gt;</code> rendering in readthedocs theme. (#171)</li>
+<li>修复: Improve the readthedocs theme on smaller displays. (#168)</li>
+<li>修复: Relaxed required python package versions to avoid clashes. (#104)</li>
+<li>修复: Fix issue rendering the table of contents with some configs. (#146)</li>
+<li>修复: Fix path for embedded images in sub pages. (#138)</li>
+<li>修复: Fix <code>use_directory_urls</code> config behaviour. (#63)</li>
+<li>修复: Support <code>extra_javascript</code> and <code>extra_css</code> in all themes (#90)</li>
+<li>修复: Fix path-handling under Windows. (#121)</li>
+<li>修复: Fix the menu generation in the readthedocs theme. (#110)</li>
+<li>修复: Fix the mkdocs command creation under Windows. (#122)</li>
+<li>修复: Correctly handle external <code>extra_javascript</code> and <code>extra_css</code>. (#92)</li>
+<li>修复: Fixed favicon support. (#87)</li>
+</ul>
+
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../license" class="btn btn-neutral" title="授权许可"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        
+      <span><a href="../license" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="" style="color: #fcfcfc">Next &raquo;</a></span>
+    </span>
+</div>
+</body>
+</html>

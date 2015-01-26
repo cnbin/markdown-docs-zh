@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>配置 - MkDocs 中文文档</title>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css\extra.css" rel="stylesheet">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script>
+
+  <style>
+    body {font-size: 90%;}
+    pre, code {font-size: 100%;}
+    h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
+  </style> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> MkDocs 中文文档</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      <ul class="current">
+    
+        
+        <span>用户指南</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../writing-your-docs">撰写文档</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../styling-your-docs">文档样式</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">配置</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#_1">配置</a></li>
+                            
+                                <li><a class="toctree-l3" href="#_2">简介</a></li>
+                            
+                                <li><a class="toctree-l3" href="#_3">项目信息</a></li>
+                            
+                                <li><a class="toctree-l3" href="#_4">目录结构</a></li>
+                            
+                                <li><a class="toctree-l3" href="#_5">构建目录</a></li>
+                            
+                                <li><a class="toctree-l3" href="#_6">预览控制</a></li>
+                            
+                                <li><a class="toctree-l3" href="#_7">格式化选项</a></li>
+                            
+                        
+                        </ul>
+                    
+                </li>
+            
+        
+
+    
+        
+        <span>关于</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../about/license">授权许可</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../about/release-notes">更新日志</a>
+                    
+                </li>
+            
+        
+
+    
+</ul>
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="../.."></a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    <li>配置</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              <h1 id="_1">配置</h1>
+<p>所有配置参数.</p>
+<hr />
+<h2 id="_2">简介</h2>
+<p>项目配置在 <code>mkdocs.yml</code> 文件中设置.</p>
+<p>配置文件中至少应包含 <code>site_name</code> 选项.  其余选项都是可选的.</p>
+<h2 id="_3">项目信息</h2>
+<h3 id="site_name">site_name</h3>
+<p>这个是 <strong>必须的</strong>, 代表用于项目文档的主标题.  例如:</p>
+<pre><code>site_name: Mashmallow Generator
+</code></pre>
+<p>渲染主题时该选项将作为 <code>site_name</code> 环境变量传递.</p>
+<h3 id="site_url">site_url</h3>
+<p>设置站点的 URL. 这将添加带有规范的 URL 的 link 标签到 HTML 头部.</p>
+<p><strong>默认值</strong>: <code>null</code></p>
+<h3 id="repo_url">repo_url</h3>
+<p>如果设置了该项, 每个页面将会添加一个链接到你的  GitHub 或 Bitbucket 版本库.</p>
+<pre><code>repo_url: https://github.com/example/repository/
+</code></pre>
+<p><strong>默认值</strong>: <code>null</code></p>
+<h3 id="repo_name">repo_name</h3>
+<p>如果设置了该项, 每个页面将会添加一个链接到你的  GitHub 或 Bitbucket 版本库.</p>
+<p><strong>默认值</strong>: <code>'GitHub'</code> 或 <code>'Bitbucket'</code> 如果 <code>repo_url</code> 匹配相应域名, 否则为 <code>null</code></p>
+<h3 id="site_description">site_description</h3>
+<p>设置站点描述. 这将这 HTML 头部添加一个 meta 标签.</p>
+<p><strong>默认值</strong>: <code>null</code></p>
+<h3 id="site_author">site_author</h3>
+<p>设置站点作者. 这将这 HTML 头部添加一个 meta 标签.</p>
+<p><strong>默认值</strong>: <code>null</code></p>
+<h3 id="site_favicon">site_favicon</h3>
+<p>设置 favicon . 需要将 <code>favicon.ico</code> 放到 <code>docs/</code> 目录, 配置文件将如下所示:</p>
+<pre><code class="yaml">site_favicon: favicon.ico
+</code></pre>
+
+<p><strong>默认值</strong>: <code>null</code></p>
+<h3 id="copyright">copyright</h3>
+<p>设置站点版权信息.</p>
+<p><strong>默认值</strong>: <code>null</code></p>
+<h3 id="google_analytics">google_analytics</h3>
+<p>设置 Google 站点分析工具.</p>
+<pre><code class="yaml">google_analytics: ['UA-36723568-3', 'mkdocs.org']
+</code></pre>
+
+<p><strong>默认值</strong>: <code>null</code></p>
+<h2 id="_4">目录结构</h2>
+<h3 id="pages">pages</h3>
+<p>该选项设置需要生成的页面范围.</p>
+<p>该选项为一个列表.  列表中的每一行用一个字符串列表表示一个页面.  第一个字符串代表源文件的路径, 应为相对于 <code>docs_dir</code> 的路径.  其余字符串代表导航条中的页面标题.</p>
+<p>下面的例子将在构建阶段生成三个页面:</p>
+<pre><code>pages:
+- ['index.md', 'Introduction']
+- ['user-guide.md', 'User Guide']
+- ['about.md', 'About']
+</code></pre>
+<p>假定 <code>docs_dir</code> 采用默认值 <code>docs</code>, 则构建阶段源文件的路径分别为 <code>docs/index.md</code>, <code>docs/user-guide.md</code> 和 <code>docs/about.md</code>.</p>
+<p>如果你有大量项目文档, 你需要用导航头部来按目录来组织你的导航.  你可以在 page 选项中包含一个额外的字符串来表示导航头部, 如下所示:</p>
+<pre><code>pages:
+- ['index.md', 'Introduction']
+- ['user-guide/creating.md', 'User Guide', 'Creating a new Mashmallow project']
+- ['user-guide/api.md', 'User Guide', 'Mashmallow API guide']
+- ['user-guide/configuration.md', 'User Guide', 'Configuring Mashmallow']
+- ['about/license.md', 'About', 'License']
+</code></pre>
+<h2 id="_5">构建目录</h2>
+<h3 id="theme">theme</h3>
+<p>设置站点主题, 查看可用的主题
+<a href="../styling-your-docs">文档样式</a>.</p>
+<p><strong>默认值</strong>: <code>'mkdocs'</code></p>
+<h3 id="theme_dir">theme_dir</h3>
+<p>设置自定义主题.  这可以是相对目录, 相对于你的配置文件位置来解析该路径, 也可以是绝对路径.</p>
+<p>查看 <a href="../styling-your-docs#custom-themes">文档样式</a> 了解自定义主题.</p>
+<p><strong>默认值</strong>: <code>null</code></p>
+<h3 id="docs_dir">docs_dir</h3>
+<p>设置包含 markdown 源码的目录.  这可以是相对目录, 相对于你的配置文件位置来解析该路径, 也可以是绝对路径.</p>
+<p><strong>默认值</strong>: <code>'docs'</code></p>
+<h3 id="site_dir">site_dir</h3>
+<p>设置生成的 HTML 和其他文件所在目录.  这可以是相对目录, 相对于你的配置文件位置来解析该路径, 也可以是绝对路径.</p>
+<p><strong>默认值</strong>: <code>'site'</code></p>
+<p><strong>Note</strong>: 如果你使用了版本控制系统, 通常不希望 <em>构建输出</em> 文件被提交到版本库, 而只需要对 <em>源码</em> 进行版本控制.  例如, 如果使用 <code>git</code> , 你可以添加以下代码到 <code>.gitignore</code> 文件:</p>
+<pre><code>site/
+</code></pre>
+<p>如果使用其他版本控制系统请参阅相应的文档以排除特定目录.</p>
+<h3 id="extra_css">extra_css</h3>
+<p>设定主题所需的额外的样式文件.</p>
+<p><strong>默认值</strong>: 默认情况下 <code>extra_css</code> 将包含 <code>docs_dir</code> 目录下的样式文件, 如果没有找到则为 <code>[]</code> (空表).</p>
+<h3 id="extra_javascript">extra_javascript</h3>
+<p>设定主题所需的额外的脚本文件.</p>
+<p><strong>默认值</strong>: 默认情况下 <code>extra_javascript</code> 将包含 <code>docs_dir</code> 目录下的脚本文件, 如果没有找到则为 <code>[]</code> (空表).</p>
+<h2 id="_6">预览控制</h2>
+<h3 id="use_directory_urls">use_directory_urls</h3>
+<p>设置文档中的链接类型.</p>
+<p>下表表明了 <code>use_directory_urls</code> 设置为 <code>true</code> 和 <code>false</code> 情况下文档中的 URLs 的不同.</p>
+<table>
+<thead>
+<tr>
+<th>Source file</th>
+<th>Generated HTML</th>
+<th>use_directory_urls=true</th>
+<th>use_directory_urls=false</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index.md</td>
+<td>index.html</td>
+<td>/</td>
+<td>/index.html</td>
+</tr>
+<tr>
+<td>api-guide.md</td>
+<td>api-guide/index.html</td>
+<td>/api-guide/</td>
+<td>/api-guide/index.html</td>
+</tr>
+<tr>
+<td>about.md</td>
+<td>about/index.html</td>
+<td>/about/</td>
+<td>/about/index.html</td>
+</tr>
+</tbody>
+</table>
+<p>默认的 <code>use_directory_urls=true</code> 选项能生成用户友好的 URLs, 通常情况下你不应该修改默认选项.</p>
+<p>替代选项在你需要直接在文件系统中打开文档, 并保持链接正确时很有用, 因为它创建的链接直接指向目标 <em>文件</em> 而不是目标 <em>文件夹</em>.</p>
+<p><strong>默认值</strong>: <code>true</code></p>
+<h3 id="dev_addr">dev_addr</h3>
+<p>设置运行 <code>mkdocs serve</code> 时的链接地址.  这使得你可以使用其他端口, 也可以使用 <code>0.0.0.0</code> 地址使你可以用本地网络访问.</p>
+<p>所有的设置都可以通过命令行设置, 例如:</p>
+<pre><code>mkdocs serve --dev-addr=0.0.0.0:80  # Run on port 80, accessible over the local network.
+</code></pre>
+<p><strong>默认值</strong>: <code>'127.0.0.1:8000'</code></p>
+<h2 id="_7">格式化选项</h2>
+<h3 id="markdown_extensions">markdown_extensions</h3>
+<p>MkDocs 使用 <a href="http://pythonhosted.org/Markdown/">Python Markdown</a> 转化 Markdown 文件为 HTML 文档. Python Markdown 支持大量格式化页面的 <a href="http://pythonhosted.org/Markdown/extensions/index.html">扩展</a>. 该选项使你可以使用 MkDocs 默认扩展之外的扩展 (<code>meta</code>, <code>toc</code>, <code>tables</code>, 和 <code>fenced_code</code>).</p>
+<p>例如, 激活 <a href="https://pypi.python.org/pypi/mdx_smartypants">SmartyPants typography extension</a> 扩展, 设置如下:</p>
+<pre><code>markdown_extensions: [smartypants]
+</code></pre>
+<p><strong>默认值</strong>: <code>[]</code></p>
+
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../about/license" class="btn btn-neutral float-right" title="授权许可"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../styling-your-docs" class="btn btn-neutral" title="文档样式"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        
+      <span><a href="../styling-your-docs" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../../about/license" style="color: #fcfcfc">Next &raquo;</a></span>
+    </span>
+</div>
+</body>
+</html>

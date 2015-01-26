@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>撰写文档 - MkDocs 中文文档</title>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css\extra.css" rel="stylesheet">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script>
+
+  <style>
+    body {font-size: 90%;}
+    pre, code {font-size: 100%;}
+    h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
+  </style> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> MkDocs 中文文档</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      <ul class="current">
+    
+        
+        <span>用户指南</span>
+            
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">撰写文档</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#_1">撰写文档</a></li>
+                            
+                                <li><a class="toctree-l3" href="#_2">目录结构</a></li>
+                            
+                                <li><a class="toctree-l3" href="#_3">链接</a></li>
+                            
+                                <li><a class="toctree-l3" href="#_5">图片和多媒体</a></li>
+                            
+                                <li><a class="toctree-l3" href="#markdown">Markdown 扩展</a></li>
+                            
+                        
+                        </ul>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../styling-your-docs">文档样式</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../configuration">配置</a>
+                    
+                </li>
+            
+        
+
+    
+        
+        <span>关于</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../about/license">授权许可</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../about/release-notes">更新日志</a>
+                    
+                </li>
+            
+        
+
+    
+</ul>
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="../.."></a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    <li>撰写文档</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              <h1 id="_1">撰写文档</h1>
+<p>如何撰写 markdown 源码并安排目录结构.</p>
+<hr />
+<h2 id="_2">目录结构</h2>
+<p>文档是普通的 Markdown 文件, 放到项目目录里.  通常目录以 <code>docs</code> 命名, 和 <code>mkdocs.yml</code> 配置文件一起放置于项目的顶级目录中.</p>
+<p>最简单的项目目录结构可能是这样的:</p>
+<pre><code>mkdocs.yml
+docs/
+    index.md
+</code></pre>
+<p>默认项目主页是 <code>index</code>.  Markdown 源码文件的后缀可以是以下任意一种: <code>markdown</code>, <code>mdown</code>, <code>mkdn</code>, <code>mkd</code>, <code>md</code>.</p>
+<p>你可以创建多个 markdown 文件以创建多页文档:</p>
+<pre><code>mkdocs.yml
+docs/
+    index.md
+    about.md
+    license.md
+</code></pre>
+<p>文档目录结构决定着生成的文档的 URLs .
+如果采用如上目录结构, 生成的 URLs 将会如下所示:</p>
+<pre><code>/
+/about/
+/license/
+</code></pre>
+<p>你也可以根据需要将 Markdown 文件放到多级目录.</p>
+<pre><code>docs/
+    index.md
+    user-guide/getting-started.md
+    user-guide/configuration-options.md
+    license.md
+</code></pre>
+<p>多级目录将生成多级 URLs, 如下所示:</p>
+<pre><code>/
+/user-guide/getting-started/
+/user-guide/configuration-options/
+/license/
+</code></pre>
+<h2 id="_3">链接</h2>
+<p>MkDocs 可以使用 Markdown 超链接语法来创建链接.</p>
+<h4 id="_4">内部超链接</h4>
+<p>创建内部超链接只需使用 Markdown 超链接语法, 包含目标 Markdown 文档的相对路径即可.</p>
+<pre><code>Please see the [project license](license.md) for further details.
+</code></pre>
+<p>当运行 MkDocs 构建工具时, 超链接将指向相应的 HTML 页面.</p>
+<p>你可以通过点击链接以在新编辑器窗口中打开目标 Markdown 文档.</p>
+<p>如果目标文档在另一个目录中, 确保超链接中正确包含了相对路径.</p>
+<pre><code>Please see the [project license](../about/license.md) for further details.
+</code></pre>
+<p>你可用通过锚链接以定位到目标文档的特定部分.  生成的 HTML 将正确转换路径部分, 而不会去改变锚链接部分.</p>
+<pre><code>Please see the [project license](about.md#license) for further details.
+</code></pre>
+<h2 id="_5">图片和多媒体</h2>
+<p>除了 Markdown 文件, 你可以在文档中包含其他文件, 这些文件将在你构建文档时被复制到指定位置.  可以包含图片和其他多媒体.</p>
+<p>例如, 如果你的文档需要包含一个 <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages#setting-the-domain-in-your-repo">GitHub pages CNAME file</a> 和 一张 PNG 图片, 你可以安排目录结构如下:</p>
+<pre><code>mkdocs.yml
+docs/
+    CNAME
+    index.md
+    about.md
+    license.md
+    img/
+        screenshot.png
+</code></pre>
+<p>要包含图片到你的源码文档, 只需使用 Markdown 语法:</p>
+<pre><code>Cupcake indexer is a snazzy new project for indexing small cakes.
+
+![Screenshot](img/screenshot.png)
+
+*Above: Cupcake indexer in progress*
+</code></pre>
+<p>图片链接将在构建时被嵌入, 如果使用了 Markdown 编辑器, 你还可以实时预览.</p>
+<h2 id="markdown">Markdown 扩展</h2>
+<p>MkDocs 支持以下 Markdown 扩展.</p>
+<h4 id="_6">表格</h4>
+<p>以下是一个简单的表格:</p>
+<pre><code>First Header | Second Header | Third Header
+------------ | ------------- | ------------
+Content Cell | Content Cell  | Content Cell
+Content Cell | Content Cell  | Content Cell
+</code></pre>
+<p>可以在起始和结束位置添加管道到表格:</p>
+<pre><code>| First Header | Second Header | Third Header |
+| ------------ | ------------- | ------------ |
+| Content Cell | Content Cell  | Content Cell |
+| Content Cell | Content Cell  | Content Cell |
+</code></pre>
+<p>可以在分隔符行添加冒号已指定每一列的对其方式:</p>
+<pre><code>First Header | Second Header | Third Header
+:----------- | :-----------: | -----------:
+Left         | Center        | Right
+Left         | Center        | Right
+</code></pre>
+<h4 id="_7">代码块</h4>
+<p>以三个以上 ` （反引号）开始一行, 并在结束位置以相同数目的反引号 ` （反引号）开始一行即可包含一个代码块:</p>
+<pre><code>```
+Fenced code blocks are like Stardard
+Markdown regular code blocks, except that
+theye not indented and instead rely on a
+start and end fence lines to delimit the code
+block.
+```
+</code></pre>
+
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../styling-your-docs" class="btn btn-neutral float-right" title="文档样式"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="主页"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        
+      <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../styling-your-docs" style="color: #fcfcfc">Next &raquo;</a></span>
+    </span>
+</div>
+</body>
+</html>

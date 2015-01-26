@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MkDocs 中文文档</title>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+  <link href="./css\extra.css" rel="stylesheet">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script>
+  <script src="./js/theme.js"></script>
+
+  <style>
+    body {font-size: 90%;}
+    pre, code {font-size: 100%;}
+    h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
+  </style> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> MkDocs 中文文档</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      <ul class="current">
+    
+        
+        <span>用户指南</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="user-guide/writing-your-docs/">撰写文档</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="user-guide/styling-your-docs/">文档样式</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="user-guide/configuration/">配置</a>
+                    
+                </li>
+            
+        
+
+    
+        
+        <span>关于</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="about/license/">授权许可</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="about/release-notes/">更新日志</a>
+                    
+                </li>
+            
+        
+
+    
+</ul>
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="."></a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    <li>主页</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              <h1 id="mkdocs">MkDocs</h1>
+<p>Markdown 项目文档工具.</p>
+<hr />
+<h2 id="_1">概述</h2>
+<p>MkDocs 是一个用于创建项目文档的 <strong>快速</strong>, <strong>简单</strong> , <strong>完美华丽</strong> 的静态站点生成器. 文档源码使用 Markdown 来撰写, 用一个 YAML 文件作为配置文档.</p>
+<hr />
+<p><strong>MkDocs 仍处于开发阶段.</strong></p>
+<p>我们正在快速成长, 但是文档仍然需要完善, 软件本身也有一些不完善的地方. 1.0 版本计划在未来几周内发布.</p>
+<hr />
+<h4 id="_2">任意托管.</h4>
+<p>构建完全的静态 HTML 站点 , 可以将它托管到 GitHub pages, Amazon S3 等任意地方.</p>
+<h4 id="_3">大量主题.</h4>
+<p>默认包含大量美观的主题. 可以从 bootstrap, readthedocs 和 12 款 bootswatch 主题中选择.</p>
+<h4 id="_4">即时预览.</h4>
+<p>内建的开发服务器使你在撰写文档的时候就即时预览. 它甚至能在保存更改时自动载入, 只需刷新浏览器就可以查看更改.</p>
+<h4 id="_5">易于配置.</h4>
+<p>可以配置文档主题.</p>
+<h4 id="_6">交叉索引.</h4>
+<p>使用 MkDocs 链接语法创建交叉索引.</p>
+<hr />
+<h2 id="_7">安装</h2>
+<p>需要 <a href="https://www.python.org/">Python</a> 和 Python package manager <a href="http://pip.readthedocs.org/en/latest/installing.html">pip</a> 来安装 MkDocs . 可以通过以下命令查看是否安装了上述依赖:</p>
+<pre><code>$ python --version
+Python 2.7.2
+$ pip --version
+pip 1.5.2
+</code></pre>
+<p>MkDocs 支持 Python 2.6, 2.7, 3.3 和 3.4.</p>
+<p>使用 pip 安装 <code>mkdocs</code> :</p>
+<pre><code>$ pip install mkdocs
+</code></pre>
+<p><code>mkdocs</code>已经安装到你的系统. 运行 <code>mkdocs help</code> 以检查是否正确安装.</p>
+<pre><code>$ mkdocs help
+mkdocs [help|new|build|serve|gh-deploy] {options}
+</code></pre>
+<hr />
+<h2 id="_8">开始</h2>
+<p>输入以下命令以开始一个新项目.</p>
+<pre><code>$ mkdocs new my-project
+$ cd my-project
+</code></pre>
+<p>我们看一下已经创建的初始化项目.</p>
+<p><img alt="The initial MkDocs layout" src="./img/initial-layout.png" /></p>
+<p>有一个配置文件 <code>mkdocs.yml</code>, 和一个包含文档源码的 <code>docs</code> 文件夹. 在 <code>docs</code> 文件夹里包含了一个名为 <code>index.md</code> 的文档.</p>
+<p>MkDocs 包含了一个内建的服务器以预览当前文档. 控制台切换当前目录到 <code>mkdocs.yml</code> 配置文件相同文件夹, 输入 <code>mkdocs serve</code> 命令以启动内建服务器:</p>
+<pre><code>$ mkdocs serve
+Running at: http://127.0.0.1:8000/
+</code></pre>
+<p>在浏览器中打开 <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> , 你将看到以下页面:</p>
+<p><img alt="The MkDocs live server" src="./img/screenshot.png" /></p>
+<p>内建服务器支持在配置文件,文档目录或主题发生改变时自动载入并重新生成文档.</p>
+<p>编辑 <code>docs/index.md</code> 文件并保存. 刷新浏览器你将看到文档被同步更新.</p>
+<p>现在可以开始编辑配置文件 <code>mkdocs.yml</code> 了.  把 <code>site_name</code> 改成其他内容并保存文档.</p>
+<p><img alt="Editing the config file" src="./img/initial-config.png" /></p>
+<p>刷新浏览器你将看到网页标题已发生改变.</p>
+<p><img alt="The site_name setting" src="./img/site-name.png" /></p>
+<h2 id="_9">添加页面</h2>
+<p>编辑 <code>doc/index.md</code> 文档, 将默认标题改为 <code>MkLorum</code>, 刷新浏览器即可看到标题变化.</p>
+<p>现在为文档添加第二个页面:</p>
+<pre><code>$ curl 'jaspervdj.be/lorem-markdownum/markdown.txt' &gt; docs/about.md
+</code></pre>
+<p>要为文档添加导航条, 只需在配置文件中添加导航条需要的标题和排序即可:</p>
+<pre><code>site_name: MkLorum
+pages:
+- [index.md, Home]
+- [about.md, About]
+</code></pre>
+<p>刷新浏览器即可看到 <code>Home</code> 和 <code>About</code> 导航栏目.</p>
+<h2 id="_10">配置主题</h2>
+<p>可以在配置文件中修改文档主题. 在 <code>mkdocs.yml</code> 中添加如下内容:</p>
+<pre><code>site_name: MkLorum
+pages:
+- [index.md, Home]
+- [about.md, About]
+theme: readthedocs
+</code></pre>
+<p>刷新浏览器即可看到 ReadTheDocs 主题已被应用.</p>
+<p><img alt="Screenshot" src="./img/readthedocs.png" /></p>
+<h2 id="_11">站点生成</h2>
+<p>我们现在已经可以发布 <code>MkLorum</code> 文档了. 通过以下命令生成文档.</p>
+<pre><code>$ mkdocs build
+</code></pre>
+<p>该命令创建了一个 <code>site</code> 新目录. 可以通过以下命令浏览该目录内容:</p>
+<pre><code>$ ls site
+about css fonts img index.html js
+</code></pre>
+<p>注意源码被分别输出为 <code>index.html</code> 和 <code>about/index.html</code>.  主题中的其他文件也被复制到了 <code>site</code> 目录中.</p>
+<p>如果你使用 <code>git</code> 等版本控制系统, 你可能不希望提交构建之后的文档到版本库.  在 <code>.gitignore</code> 中添加 <code>site/</code> 即可忽略该目录.</p>
+<pre><code>$ echo "site/" &gt;&gt; .gitignore
+</code></pre>
+<p>如果你使用其他版本控制系统则需要查阅相关文档以确定如何忽略指定目录.</p>
+<p>一段时间后, 可能有文件被从源码中移除了, 但是相关的文档仍残留在 <code>site</code> 目录中. 在构建命令中添加 <code>--clean</code> 参数即可移除这些文档.</p>
+<pre><code>$ mkdocs build --clean
+</code></pre>
+<h2 id="_12">发布</h2>
+<p>MkDocs 生成的文档只包含静态文件, 因此你可以将文档部署到任意地方. <a href="https://help.github.com/articles/creating-project-pages-manually">GitHub project pages</a> 和 <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">Amazon S3</a> 是不错的选择. 只需上传 <code>site</code> 目录到你需要发布的位置即可.</p>
+
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="user-guide/writing-your-docs/" class="btn btn-neutral float-right" title="撰写文档"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        
+      <span><a href="" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="user-guide/writing-your-docs/" style="color: #fcfcfc">Next &raquo;</a></span>
+    </span>
+</div>
+</body>
+</html>
