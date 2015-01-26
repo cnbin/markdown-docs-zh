@@ -162,9 +162,9 @@ google_analytics: ['UA-36723568-3', 'mkdocs.org']
 
 ### use_directory_urls
 
-This setting controls the style used for linking to pages within the documentation.
+设置文档中的链接类型.
 
-The following table demonstrates how the URLs used on the site differ when setting `use_directory_urls` to `true` or `false`.
+下表表明了 `use_directory_urls` 设置为 `true` 和 `false` 情况下文档中的 URLs 的不同.
 
 Source file  | Generated HTML       | use_directory_urls=true  | use_directory_urls=false
 ------------ | -------------------- | ------------------------ | ------------------------
@@ -172,29 +172,29 @@ index.md     | index.html           | /                        | /index.html
 api-guide.md | api-guide/index.html | /api-guide/              | /api-guide/index.html
 about.md     | about/index.html     | /about/                  | /about/index.html
 
-The default style of `use_directory_urls=true` creates more user friendly URLs, and is usually what you'll want to use.
+默认的 `use_directory_urls=true` 选项能生成用户友好的 URLs, 通常情况下你不应该修改默认选项.
 
-The alternate style can occasionally be useful if you want your documentation to remain properly linked when opening pages directly from the file system, because it create links that point directly to the target *file* rather than the target *directory*.
+替代选项在你需要直接在文件系统中打开文档, 并保持链接正确时很有用, 因为它创建的链接直接指向目标 *文件* 而不是目标 *文件夹*.
 
 **默认值**: `true`
 
 ### dev_addr
 
-Determines the address used when running `mkdocs serve`.  Setting this allows you to use another port, or allows you to make the service accessible over your local network by using the `0.0.0.0` address.
+设置运行 `mkdocs serve` 时的链接地址.  这使得你可以使用其他端口, 也可以使用 `0.0.0.0` 地址使你可以用本地网络访问.
 
-As with all settings, you can set this from the command line, which can be usful, for example:
+所有的设置都可以通过命令行设置, 例如:
 
     mkdocs serve --dev-addr=0.0.0.0:80  # Run on port 80, accessible over the local network.
 
 **默认值**: `'127.0.0.1:8000'`
 
-## Formatting options
+## 格式化选项
 
 ### markdown_extensions
 
-MkDocs uses the [Python Markdown][pymkd] library to translate Markdown files into HTML. Python Markdown supports a variety of [extensions][pymdk-extensions] that customize how pages are formatted. This setting lets you enable a list of extensions beyond the ones that MkDocs uses by default (`meta`, `toc`, `tables`, and `fenced_code`).
+MkDocs 使用 [Python Markdown][pymkd] 转化 Markdown 文件为 HTML 文档. Python Markdown 支持大量格式化页面的 [扩展][pymdk-extensions]. 该选项使你可以使用 MkDocs 默认扩展之外的扩展 (`meta`, `toc`, `tables`, 和 `fenced_code`).
 
-For example, to enable the [SmartyPants typography extension][smarty], use:
+例如, 激活 [SmartyPants typography extension][smarty] 扩展, 设置如下:
 
     markdown_extensions: [smartypants]
 
