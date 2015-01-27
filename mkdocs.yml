@@ -16,3 +16,4 @@ pages:
 # google_analytics: ['UA-27795084-5', 'mkdocs.org']
 
 theme: readthedocs
+repo_url: https://github.com/chengsu/markdown-docs-zh/
